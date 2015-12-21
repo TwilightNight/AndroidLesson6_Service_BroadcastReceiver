@@ -7,7 +7,18 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".BombActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <service android:name=".BombService"/>
+        <receiver android:name=".BombReceiver">
+            <intent-filter>
+                <action android:name="BOMB_SERVICE_ACTION"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
